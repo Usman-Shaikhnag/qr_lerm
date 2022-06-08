@@ -1,0 +1,15 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:lims.results_report,signed:"
+msgid "Signed"
+msgstr "Firmado"
+
+msgctxt "field:lims.results_report,signed_date:"
+msgid "Signed date"
+msgstr "Fecha de firmado"
+
+msgctxt "view:lims.results_report:"
+msgid "Time"
+msgstr "Hora"

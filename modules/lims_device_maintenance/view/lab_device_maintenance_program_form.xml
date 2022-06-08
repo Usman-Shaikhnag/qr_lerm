@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<form>
+    <label name="device"/>
+    <field name="device" colspan="3"/>
+    <label name="activity"/>
+    <field name="activity"/>
+    <label name="frequency"/>
+    <field name="frequency"/>
+    <group id="responsible" colspan="2" col="4">
+        <label name="responsible"/>
+        <field name="responsible"/>
+        <label name="notice_days"/>
+        <field name="notice_days" xexpand="0"/>
+    </group>
+    <group id="latest_date" colspan="2" col="2">
+        <label name="latest_date"/>
+        <field name="latest_date"/>
+    </group>
+</form>

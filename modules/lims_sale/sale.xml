@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+<!-- Sale -->
+
+        <record model="ir.ui.view" id="sale_view_form">
+            <field name="model">sale.sale</field>
+            <field name="inherit" ref="sale.sale_view_form"/>
+            <field name="name">sale_form</field>
+        </record>
+
+        <record model="ir.model.button" id="sale_load_services_button">
+            <field name="name">load_services</field>
+            <field name="string">Load Services from Entry</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+        <record model="ir.model.button" id="sale_load_set_group_button">
+            <field name="name">load_set_group</field>
+            <field name="string">Load Analysis from Set/Group</field>
+            <field name="model" search="[('model', '=', 'sale.sale')]"/>
+        </record>
+
+<!-- Sale Line -->
+
+        <record model="ir.ui.view" id="sale_line_view_form">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_form"/>
+            <field name="name">sale_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="sale_line_view_list">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_tree"/>
+            <field name="name">sale_line_list</field>
+        </record>
+        <record model="ir.ui.view" id="sale_line_view_list_sequence">
+            <field name="model">sale.line</field>
+            <field name="inherit" ref="sale.sale_line_view_tree_sequence"/>
+            <field name="name">sale_line_list_sequence</field>
+        </record>
+
+<!-- Sale Load Services from Entry Wizard-->
+
+        <record model="ir.ui.view" id="sale_load_services_start_view_form">
+            <field name="model">sale.load_services.start</field>
+            <field name="type">form</field>
+            <field name="name">sale_load_services_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_sale_load_services">
+            <field name="name">Load Services from Entry</field>
+            <field name="wiz_name">sale.load_services</field>
+            <field name="model">sale.sale</field>
+        </record>
+
+<!-- Sale Load Analysis from Set/Group Wizard-->
+
+        <record model="ir.ui.view" id="sale_load_set_group_start_view_form">
+            <field name="model">sale.load_set_group.start</field>
+            <field name="type">form</field>
+            <field name="name">sale_load_set_group_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wiz_sale_load_set_group">
+            <field name="name">Load Analysis from Set/Group</field>
+            <field name="wiz_name">sale.load_set_group</field>
+            <field name="model">sale.sale</field>
+        </record>
+
+    </data>
+</tryton>
